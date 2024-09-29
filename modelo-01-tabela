@@ -1,18 +1,20 @@
 <table class="table table-bordered table-hover">
-    <tr>
+
+<tr>
         <td>cliente</td>
         <td>razão social</td>
         <td>obs</td>
         <td>cond pagto</td>
         <td>data de cadastramento</td>
 
+</tr>
 <tr>
-        <td><?= $cliente['cliente'] ?></td>
-        <td><?= $cliente['razaosocia'] ?></td>
-        <td><?= substr($cliente['obs'], 0, 40) ?></td>
-        <td><?= $cliente['condpagto_nome'] ?></td>
-        <td><?php echo date("d/m/Y", strtotime($cliente['data_de_ca'])) ?>
-        <td><a class="btn btn-primary" href="cliente-altera-formulario.php?id=<?=$cliente['id']?>">detalhar</a></td>
+        <td> <?= $cliente['cliente'] ?> </td>
+        <td> <?= $cliente['razaosocia'] ?> </td>
+        <td> <?= substr($cliente['obs'], 0, 40) ?> </td>
+        <td> <?= $cliente['condpagto_nome'] ?></td>
+        <td> <?php echo date("d/m/Y", strtotime($cliente['data_de_ca'])) ?> </td>
+        <td> <a class="btn btn-primary" href="cliente-altera-formulario.php?id=<?= $cliente['id'] ?>">detalhar</a> </td>
         <td>
             <form action="remove-cliente.php" method="post">
                 <input type="hidden" name="id" value="<?=$cliente['id']?>" />
